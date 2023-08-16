@@ -11,9 +11,9 @@
 		F7826C962A8CFFAB005133DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7826C952A8CFFAB005133DE /* ContentView.swift */; };
 		F7826C982A8CFFAE005133DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7826C972A8CFFAE005133DE /* Assets.xcassets */; };
 		F7826C9B2A8CFFAE005133DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7826C9A2A8CFFAE005133DE /* Preview Assets.xcassets */; };
-		F7826CA52A8CFFAF005133DE /* DoubleNumbersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7826CA42A8CFFAF005133DE /* DoubleNumbersTests.swift */; };
-		F7826CAF2A8CFFAF005133DE /* DoubleNumbersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7826CAE2A8CFFAF005133DE /* DoubleNumbersUITests.swift */; };
-		F7826CB12A8CFFAF005133DE /* DoubleNumbersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7826CB02A8CFFAF005133DE /* DoubleNumbersUITestsLaunchTests.swift */; };
+		F7826CDE2A8D05C8005133DE /* BlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7826CDD2A8D05C8005133DE /* BlockView.swift */; };
+		F7826CE02A8D060B005133DE /* IdentifiedBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7826CDF2A8D060B005133DE /* IdentifiedBlock.swift */; };
+		F7826CE22A8D0687005133DE /* BlockMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7826CE12A8D0687005133DE /* BlockMatrix.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +40,10 @@
 		F7826C972A8CFFAE005133DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7826C9A2A8CFFAE005133DE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F7826CA02A8CFFAE005133DE /* DoubleNumbersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoubleNumbersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7826CA42A8CFFAF005133DE /* DoubleNumbersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleNumbersTests.swift; sourceTree = "<group>"; };
 		F7826CAA2A8CFFAF005133DE /* DoubleNumbersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoubleNumbersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7826CAE2A8CFFAF005133DE /* DoubleNumbersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleNumbersUITests.swift; sourceTree = "<group>"; };
-		F7826CB02A8CFFAF005133DE /* DoubleNumbersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleNumbersUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F7826CDD2A8D05C8005133DE /* BlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockView.swift; sourceTree = "<group>"; };
+		F7826CDF2A8D060B005133DE /* IdentifiedBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiedBlock.swift; sourceTree = "<group>"; };
+		F7826CE12A8D0687005133DE /* BlockMatrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockMatrix.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				F7826C922A8CFFAB005133DE /* DoubleNumbers */,
-				F7826CA32A8CFFAE005133DE /* DoubleNumbersTests */,
-				F7826CAD2A8CFFAF005133DE /* DoubleNumbersUITests */,
 				F7826C912A8CFFAB005133DE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,6 +94,8 @@
 			children = (
 				F7826C932A8CFFAB005133DE /* DoubleNumbersApp.swift */,
 				F7826C952A8CFFAB005133DE /* ContentView.swift */,
+				F7826CDC2A8D0549005133DE /* Views */,
+				F7826CBD2A8CFFDA005133DE /* Models */,
 				F7826C972A8CFFAE005133DE /* Assets.xcassets */,
 				F7826C992A8CFFAE005133DE /* Preview Content */,
 			);
@@ -110,21 +110,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		F7826CA32A8CFFAE005133DE /* DoubleNumbersTests */ = {
+		F7826CBD2A8CFFDA005133DE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F7826CA42A8CFFAF005133DE /* DoubleNumbersTests.swift */,
+				F7826CDF2A8D060B005133DE /* IdentifiedBlock.swift */,
+				F7826CE12A8D0687005133DE /* BlockMatrix.swift */,
 			);
-			path = DoubleNumbersTests;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		F7826CAD2A8CFFAF005133DE /* DoubleNumbersUITests */ = {
+		F7826CDC2A8D0549005133DE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F7826CAE2A8CFFAF005133DE /* DoubleNumbersUITests.swift */,
-				F7826CB02A8CFFAF005133DE /* DoubleNumbersUITestsLaunchTests.swift */,
+				F7826CDD2A8D05C8005133DE /* BlockView.swift */,
 			);
-			path = DoubleNumbersUITests;
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +257,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7826CE02A8D060B005133DE /* IdentifiedBlock.swift in Sources */,
 				F7826C962A8CFFAB005133DE /* ContentView.swift in Sources */,
+				F7826CE22A8D0687005133DE /* BlockMatrix.swift in Sources */,
+				F7826CDE2A8D05C8005133DE /* BlockView.swift in Sources */,
 				F7826C942A8CFFAB005133DE /* DoubleNumbersApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,7 +269,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7826CA52A8CFFAF005133DE /* DoubleNumbersTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +276,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7826CB12A8CFFAF005133DE /* DoubleNumbersUITestsLaunchTests.swift in Sources */,
-				F7826CAF2A8CFFAF005133DE /* DoubleNumbersUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
