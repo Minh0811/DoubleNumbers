@@ -79,16 +79,23 @@ struct BlockView : View {
     
     fileprivate var colorPair: (Color, Color) {
         guard let number = number else {
+            //Color for block without number
             return (Color(red:0.78, green:0.73, blue:0.68, opacity:1.00), Color.black)
         }
+        //Calculate the index value base on the number of the block
+        //Example: index of number 2 is 0, log2(2) - 1 = 0
+        //Example: index of number 8 is 2, log2(8) - 1 = 2
         let index = Int(log2(Double(number))) - 1
+        
+        //Make sure the index is in bound
+        //TODO: have to update for level-based game
         if index < 0 || index >= colorScheme.count {
             fatalError("No color for such number")
         }
         return colorScheme[index]
     }
     
-    // MARK: Body
+    // MARK: - Body
     
     var body: some View {
         ZStack {
@@ -118,7 +125,7 @@ struct BlockView_Previews : PreviewProvider {
     static var previews: some View {
         Group {
             ForEach((1...11).map { Int(pow(2, Double($0))) }, id: \.self) { i in
-                BlockView(block: IdentifiedBlock(id: 0, number: i))
+                BlockView(block: IdentifiedBlock(id: 3, number: i))
                     .previewLayout(.sizeThatFits)
             }
             

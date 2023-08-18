@@ -73,40 +73,37 @@ struct BlockGridView : View {
     let matrix: Self.SupportingMatrix
     let blockEnterEdge: Edge
     
+    // New values for the grid's frame
+    let blockSize: CGFloat = 65
+    let spacing: CGFloat = 12
+    var gridWidth: CGFloat {
+        return CGFloat(6) * (blockSize + spacing) + spacing
+    }
+    var gridHeight: CGFloat {
+        return gridWidth // Since it's a square
+    }
+    
     func createBlock(_ block: IdentifiedBlock?,
                      at index: IndexedBlock<IdentifiedBlock>.Index) -> some View {
-        let blockView: BlockView
-        if let block = block {
-            blockView = BlockView(block: block)
-        } else {
-            blockView = BlockView.blank()
-        }
-        
-        // TODO: Still need refactor, these hard-coded values sucks!!
-        let blockSize: CGFloat = 65
-        let spacing: CGFloat = 12
-        
         let position = CGPoint(
             x: CGFloat(index.0) * (blockSize + spacing) + blockSize / 2 + spacing,
             y: CGFloat(index.1) * (blockSize + spacing) + blockSize / 2 + spacing
         )
         
+        let blockView = block.map(BlockView.init) ?? BlockView.blank()
+        
         return blockView
-            .frame(width: 65, height: 65, alignment: .center)
+            .frame(width: blockSize, height: blockSize, alignment: .center)
             .position(x: position.x, y: position.y)
             .transition(.blockGenerated(
                 from: self.blockEnterEdge,
                 position: CGPoint(x: position.x, y: position.y),
-                in: CGRect(x: 0, y: 0, width: 320, height: 320)
+                in: CGRect(x: 0, y: 0, width: gridWidth, height: gridHeight)
             ))
     }
     
-    // FIXME: This is existed as a workaround for a Swift compiler bug.
     func zIndex(_ block: IdentifiedBlock?) -> Double {
-        if block == nil {
-            return 1
-        }
-        return 1000
+        return block == nil ? 1 : 1000
     }
     
     var body: some View {
@@ -126,7 +123,7 @@ struct BlockGridView : View {
             .zIndex(1000)
             .animation(.interactiveSpring(response: 0.4, dampingFraction: 0.8))
         }
-        .frame(width: 320, height: 320, alignment: .center)
+        .frame(width: gridWidth, height: gridHeight, alignment: .center)
         .background(
             Rectangle()
                 .fill(Color(red:0.72, green:0.66, blue:0.63, opacity:1.00))

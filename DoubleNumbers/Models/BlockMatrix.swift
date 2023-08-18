@@ -32,9 +32,9 @@ struct BlockMatrix<T> : CustomDebugStringConvertible where T: Block {
     
     init() {
         matrix = [[T?]]()
-        for _ in 0..<4 {
+        for _ in 0..<6 {
             var row = [T?]()
-            for _ in 0..<4 {
+            for _ in 0..<6 {
                 row.append(nil)
             }
             matrix.append(row)
@@ -117,11 +117,11 @@ struct BlockMatrix<T> : CustomDebugStringConvertible where T: Block {
     }
     
     fileprivate func isIndexValid(_ index: Self.Index) -> Bool {
-        guard index.0 >= 0 && index.0 < 4 else {
+        guard index.0 >= 0 && index.0 < 6 else {
             return false
         }
         
-        guard index.1 >= 0 && index.1 < 4 else {
+        guard index.1 >= 0 && index.1 < 6 else {
             return false
         }
         
