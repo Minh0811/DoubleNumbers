@@ -14,6 +14,11 @@
 		F7826CDE2A8D05C8005133DE /* BlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7826CDD2A8D05C8005133DE /* BlockView.swift */; };
 		F7826CE02A8D060B005133DE /* IdentifiedBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7826CDF2A8D060B005133DE /* IdentifiedBlock.swift */; };
 		F7826CE22A8D0687005133DE /* BlockMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7826CE12A8D0687005133DE /* BlockMatrix.swift */; };
+		F7826CE42A8D0723005133DE /* BlockGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7826CE32A8D0723005133DE /* BlockGridView.swift */; };
+		F7826CE62A8D0767005133DE /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7826CE52A8D0767005133DE /* GameView.swift */; };
+		F7826CE82A8D0791005133DE /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7826CE72A8D0790005133DE /* GameLogic.swift */; };
+		F7826CEA2A8D0812005133DE /* SwiftUIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7826CE92A8D0812005133DE /* SwiftUIExtensions.swift */; };
+		F7826CEC2A8D083D005133DE /* FunctionalUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7826CEB2A8D083D005133DE /* FunctionalUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		F7826CDD2A8D05C8005133DE /* BlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockView.swift; sourceTree = "<group>"; };
 		F7826CDF2A8D060B005133DE /* IdentifiedBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiedBlock.swift; sourceTree = "<group>"; };
 		F7826CE12A8D0687005133DE /* BlockMatrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockMatrix.swift; sourceTree = "<group>"; };
+		F7826CE32A8D0723005133DE /* BlockGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockGridView.swift; sourceTree = "<group>"; };
+		F7826CE52A8D0767005133DE /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		F7826CE72A8D0790005133DE /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
+		F7826CE92A8D0812005133DE /* SwiftUIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExtensions.swift; sourceTree = "<group>"; };
+		F7826CEB2A8D083D005133DE /* FunctionalUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionalUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +104,8 @@
 			children = (
 				F7826C932A8CFFAB005133DE /* DoubleNumbersApp.swift */,
 				F7826C952A8CFFAB005133DE /* ContentView.swift */,
+				F7826CEB2A8D083D005133DE /* FunctionalUtils.swift */,
+				F7826CE92A8D0812005133DE /* SwiftUIExtensions.swift */,
 				F7826CDC2A8D0549005133DE /* Views */,
 				F7826CBD2A8CFFDA005133DE /* Models */,
 				F7826C972A8CFFAE005133DE /* Assets.xcassets */,
@@ -115,6 +127,7 @@
 			children = (
 				F7826CDF2A8D060B005133DE /* IdentifiedBlock.swift */,
 				F7826CE12A8D0687005133DE /* BlockMatrix.swift */,
+				F7826CE72A8D0790005133DE /* GameLogic.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -123,6 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				F7826CDD2A8D05C8005133DE /* BlockView.swift */,
+				F7826CE32A8D0723005133DE /* BlockGridView.swift */,
+				F7826CE52A8D0767005133DE /* GameView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -257,11 +272,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7826CEC2A8D083D005133DE /* FunctionalUtils.swift in Sources */,
+				F7826CEA2A8D0812005133DE /* SwiftUIExtensions.swift in Sources */,
+				F7826CE42A8D0723005133DE /* BlockGridView.swift in Sources */,
 				F7826CE02A8D060B005133DE /* IdentifiedBlock.swift in Sources */,
+				F7826CE82A8D0791005133DE /* GameLogic.swift in Sources */,
 				F7826C962A8CFFAB005133DE /* ContentView.swift in Sources */,
 				F7826CE22A8D0687005133DE /* BlockMatrix.swift in Sources */,
 				F7826CDE2A8D05C8005133DE /* BlockView.swift in Sources */,
 				F7826C942A8CFFAB005133DE /* DoubleNumbersApp.swift in Sources */,
+				F7826CE62A8D0767005133DE /* GameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
