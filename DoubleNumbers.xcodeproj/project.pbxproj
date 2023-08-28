@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F7826C942A8CFFAB005133DE /* DoubleNumbersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7826C932A8CFFAB005133DE /* DoubleNumbersApp.swift */; };
-		F7826C962A8CFFAB005133DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7826C952A8CFFAB005133DE /* ContentView.swift */; };
 		F7826C982A8CFFAE005133DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7826C972A8CFFAE005133DE /* Assets.xcassets */; };
 		F7826C9B2A8CFFAE005133DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7826C9A2A8CFFAE005133DE /* Preview Assets.xcassets */; };
 		F7826CDE2A8D05C8005133DE /* BlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7826CDD2A8D05C8005133DE /* BlockView.swift */; };
@@ -41,7 +40,6 @@
 /* Begin PBXFileReference section */
 		F7826C902A8CFFAB005133DE /* DoubleNumbers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubleNumbers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7826C932A8CFFAB005133DE /* DoubleNumbersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleNumbersApp.swift; sourceTree = "<group>"; };
-		F7826C952A8CFFAB005133DE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F7826C972A8CFFAE005133DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7826C9A2A8CFFAE005133DE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F7826CA02A8CFFAE005133DE /* DoubleNumbersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoubleNumbersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				F7826C932A8CFFAB005133DE /* DoubleNumbersApp.swift */,
-				F7826C952A8CFFAB005133DE /* ContentView.swift */,
 				F7826CEB2A8D083D005133DE /* FunctionalUtils.swift */,
 				F7826CE92A8D0812005133DE /* SwiftUIExtensions.swift */,
 				F7826CDC2A8D0549005133DE /* Views */,
@@ -277,7 +274,6 @@
 				F7826CE42A8D0723005133DE /* BlockGridView.swift in Sources */,
 				F7826CE02A8D060B005133DE /* IdentifiedBlock.swift in Sources */,
 				F7826CE82A8D0791005133DE /* GameLogic.swift in Sources */,
-				F7826C962A8CFFAB005133DE /* ContentView.swift in Sources */,
 				F7826CE22A8D0687005133DE /* BlockMatrix.swift in Sources */,
 				F7826CDE2A8D05C8005133DE /* BlockView.swift in Sources */,
 				F7826C942A8CFFAB005133DE /* DoubleNumbersApp.swift in Sources */,

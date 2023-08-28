@@ -61,10 +61,10 @@ final class GameLogic : ObservableObject {
         var moved = false
         
         let axis = direction == .left || direction == .right
-        for row in 0..<6 {
+        for row in 0..<4 {
             var rowSnapshot = [IdentifiedBlock?]()
             var compactRow = [IdentifiedBlock]()
-            for col in 0..<6 {
+            for col in 0..<4 {
                 // Transpose if necessary.
                 if let block = _blockMatrix[axis ? (col, row) : (row, col)] {
                     rowSnapshot.append(block)
@@ -77,8 +77,8 @@ final class GameLogic : ObservableObject {
             
             var newRow = [IdentifiedBlock?]()
             compactRow.forEach { newRow.append($0) }
-            if compactRow.count < 6 {
-                for _ in 0..<(6 - compactRow.count) {
+            if compactRow.count < 4 {
+                for _ in 0..<(4 - compactRow.count) {
                     if direction == .left || direction == .up {
                         newRow.append(nil)
                     } else {
@@ -129,8 +129,8 @@ final class GameLogic : ObservableObject {
     
     @discardableResult fileprivate func generateNewBlocks() -> Bool {
         var blankLocations = [BlockMatrixType.Index]()
-        for rowIndex in 0..<6 {
-            for colIndex in 0..<6 {
+        for rowIndex in 0..<4 {
+            for colIndex in 0..<4 {
                 let index = (colIndex, rowIndex)
                 if _blockMatrix[index] == nil {
                     blankLocations.append(index)
